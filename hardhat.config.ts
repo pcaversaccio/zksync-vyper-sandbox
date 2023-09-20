@@ -2,13 +2,14 @@ import * as dotenv from "dotenv";
 
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-vyper";
 import "@nomicfoundation/hardhat-verify";
 import "@typechain/hardhat";
-import "@nomiclabs/hardhat-vyper";
 import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-vyper";
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-verify";
+import "@matterlabs/hardhat-zksync-verify-vyper";
 
 dotenv.config();
 
@@ -46,15 +47,17 @@ const config: HardhatUserConfig = {
       libraries: {},
     },
   },
-  defaultNetwork: "zkSyncTestnet",
   networks: {
     hardhat: {
       chainId: 31337,
       hardfork: "shanghai",
       zksync: true,
     },
-    localhost: {
-      url: "http://127.0.0.1:8545",
+    zkSyncLocal: {
+      chainId: 270,
+      url: "http://localhost:3050",
+      ethNetwork: "http://localhost:8545",
+      zksync: true,
     },
     goerli: {
       chainId: 5,
@@ -72,6 +75,8 @@ const config: HardhatUserConfig = {
       chainId: 280,
       url: process.env.ZKSYNC_TESTNET_URL || "",
       ethNetwork: process.env.ETH_GOERLI_TESTNET_URL || "",
+      // url: "http://127.0.0.1:3050",
+      // ethNetwork: "http://localhost:8545",
       zksync: true,
       verifyURL:
         "https://zksync2-testnet-explorer.zksync.dev/contract_verification",

@@ -20,6 +20,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "npx hardhat compile",
+    "deploy:zksynclocal": "npx hardhat deploy-zksync --network zkSyncLocal --script deploy-zksync.ts",
     "deploy:zksynctestnet": "npx hardhat deploy-zksync --network zkSyncTestnet --script deploy-zksync.ts",
     "deploy:zksyncmain": "npx hardhat deploy-zksync --network zkSyncMain --script deploy-zksync.ts",
     "prettier:check": "npx prettier -c **/*.{js,ts,md,sol,json,yml,yaml}",
@@ -35,6 +36,7 @@
     "@matterlabs/hardhat-zksync-deploy": "^0.6.5",
     "@matterlabs/hardhat-zksync-solc": "^0.4.2",
     "@matterlabs/hardhat-zksync-verify": "^0.2.0",
+    "@matterlabs/hardhat-zksync-verify-vyper": "^0.0.1-alpha.2",
     "@matterlabs/hardhat-zksync-vyper": "^0.2.2",
     "@nomicfoundation/hardhat-verify": "^1.1.1",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
