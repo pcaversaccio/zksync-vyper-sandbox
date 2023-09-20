@@ -1,0 +1,3 @@
+[submodule "local-setup"]
+	path = local-setup
+	url = https://github.com/matter-labs/local-setup.git

@@ -2,6 +2,20 @@
 
 We cannot trust in what we do not understand. The source code of the compiler can be found [here](https://github.com/matter-labs/era-compiler-vyper).
 
+## Installation
+
+Invoke
+
+```console
+yarn install
+```
+
+and
+
+```console
+git submodule update --init --recursive
+```
+
 ## Get Started
 
 ```console
