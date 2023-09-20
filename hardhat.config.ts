@@ -75,8 +75,6 @@ const config: HardhatUserConfig = {
       chainId: 280,
       url: process.env.ZKSYNC_TESTNET_URL || "",
       ethNetwork: process.env.ETH_GOERLI_TESTNET_URL || "",
-      // url: "http://127.0.0.1:3050",
-      // ethNetwork: "http://localhost:8545",
       zksync: true,
       verifyURL:
         "https://zksync2-testnet-explorer.zksync.dev/contract_verification",

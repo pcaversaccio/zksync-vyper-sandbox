@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import hre, { ethers } from "hardhat";
+import { ethers } from "hardhat";
 
 async function main() {
   const contract = await ethers.deployContract("Greeter", ["Hello, Hardhat!"]);
@@ -7,12 +6,6 @@ async function main() {
   await contract.deployed();
 
   console.log("Greeter deployed to:", contract.address);
-
-  // Uncomment if you want to enable the `tenderly` extension
-  // await hre.tenderly.verify({
-  //   name: "Greeter",
-  //   address: contract.address,
-  // });
 }
 
 main().catch((error) => {
