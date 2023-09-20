@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es2021",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "outDir": "dist",
     "declaration": true
   },
-  "include": ["./scripts", "./test", "./typechain-types"],
+  "include": ["./scripts", "./deploy", "./typechain-types"],
   "files": ["./hardhat.config.ts"]
 }

@@ -51,26 +51,6 @@ artifacts
 # TypeScript bindings output directory
 typechain-types
 
-# solidity-coverage directory and output file
-coverage
-coverage.json
-
-# xdeployer output directory
-deployments
-
-# Foundry output directory
-forge-artifacts
-
-# Ignore flattened files
-flattened.sol
-
-# Tenderly fork deployment directory
-deployments_tenderly
-
 # zkSync files
 cache-zk
 artifacts-zk
-
-# Miscellaneous files
-bin
-out
