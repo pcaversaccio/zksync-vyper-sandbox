@@ -55,8 +55,8 @@ const config: HardhatUserConfig = {
     },
     zkSyncLocal: {
       chainId: 270,
-      url: "http://localhost:3050",
-      ethNetwork: "http://localhost:8545",
+      url: process.env.ZKSYNC_LOCAL_TESTNET_URL || "",
+      ethNetwork: process.env.ETH_LOCAL_TESTNET_URL || "",
       zksync: true,
     },
     goerli: {
