@@ -1,5 +1,5 @@
-// SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.21;
+// SPDX-License-Identifier: WTFPL
+pragma solidity ^0.8.19;
 
 contract Greeter {
     string private _greeting;

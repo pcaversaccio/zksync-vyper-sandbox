@@ -16,7 +16,7 @@ and
 git submodule update --init --recursive
 ```
 
-## Get Started
+## Get Local Node Started
 
 ```console
 cd local-setup
@@ -32,14 +32,24 @@ cd local-setup
 
 ## Retrieve Values
 
-Local node:
+#### Local Node
 
 ```console
 cast call --rpc-url http://localhost:3050 <contract-address> "var()"
 ```
 
-Testnet:
+#### Testnet
 
 ```console
 cast call --rpc-url https://testnet.era.zksync.dev <contract-address> "var()"
 ```
+
+## Further References
+
+- https://github.com/matter-labs/era-compiler-vyper
+- https://github.com/matter-labs/hardhat-zksync
+- https://github.com/matter-labs/era-contracts
+- https://github.com/matter-labs/era-system-contracts
+- https://github.com/matter-labs/zkvyper-bin
+- https://github.com/matter-labs/zksync-hardhat-vyper-template
+- https://github.com/matter-labs/local-setup
