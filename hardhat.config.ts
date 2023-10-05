@@ -42,7 +42,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.3.10",
+    version: "1.3.11",
     settings: {
       libraries: {},
     },
