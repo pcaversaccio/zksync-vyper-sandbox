@@ -18,19 +18,20 @@ const config: HardhatUserConfig = {
     sources: "./contracts/vyper",
   },
   solidity: {
-    version: "0.8.19",
+    version: "0.8.22",
     settings: {
       optimizer: {
         enabled: true,
         runs: 999999,
       },
+      evmVersion: "paris", // prevent using the `PUSH0` opcode
     },
   },
   vyper: {
-    version: "0.3.9",
+    version: "0.3.10",
   },
   zksolc: {
-    version: "1.3.14",
+    version: "1.3.15",
     compilerSource: "binary",
     settings: {
       isSystem: false,
@@ -42,7 +43,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.3.11",
+    version: "1.3.12",
     settings: {
       libraries: {},
     },

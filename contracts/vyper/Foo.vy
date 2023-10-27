@@ -1,4 +1,4 @@
-# @version ^0.3.9
+# @version ^0.3.10
 """
 @custom:contract-name Foo
 @license Do What The F*ck You Want To Public License
