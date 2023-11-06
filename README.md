@@ -7,7 +7,7 @@ We cannot trust in what we do not understand. The source code of the compiler ca
 Invoke
 
 ```console
-yarn install
+pnpm install
 ```
 
 and

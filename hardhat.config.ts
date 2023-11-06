@@ -1,7 +1,6 @@
-import * as dotenv from "dotenv";
+import { HardhatUserConfig, vars } from "hardhat/config";
 
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomiclabs/hardhat-ethers";
+import "@nomicfoundation/hardhat-ethers";
 import "@nomiclabs/hardhat-vyper";
 import "@nomicfoundation/hardhat-verify";
 import "@typechain/hardhat";
@@ -11,7 +10,14 @@ import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-verify";
 import "@matterlabs/hardhat-zksync-verify-vyper";
 
-dotenv.config();
+const ethMainnetUrl = vars.get("ETH_MAINNET_URL", "https://rpc.ankr.com/eth");
+const accounts = [
+  vars.get(
+    "PRIVATE_KEY",
+    // `keccak256("DEFAULT_VALUE")`
+    "0x0d1706281056b7de64efd2088195fa8224c39103f578c9b84f951721df3fa71c",
+  ),
+];
 
 const config: HardhatUserConfig = {
   paths: {
@@ -58,44 +64,50 @@ const config: HardhatUserConfig = {
     },
     zkSyncLocal: {
       chainId: 270,
-      url: process.env.ZKSYNC_LOCAL_TESTNET_URL || "",
-      ethNetwork: process.env.ETH_LOCAL_TESTNET_URL || "",
+      url: vars.get("ZKSYNC_LOCAL_TESTNET_URL", "http://localhost:3050"),
+      ethNetwork: vars.get("ETH_LOCAL_TESTNET_URL", "http://localhost:8545"),
       zksync: true,
     },
     goerli: {
       chainId: 5,
-      url: process.env.ETH_GOERLI_TESTNET_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: vars.get(
+        "ETH_GOERLI_TESTNET_URL",
+        "https://rpc.ankr.com/eth_goerli",
+      ),
+      accounts,
     },
     sepolia: {
       chainId: 11155111,
-      url: process.env.ETH_SEPOLIA_TESTNET_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: vars.get("ETH_SEPOLIA_TESTNET_URL", "https://rpc.sepolia.org"),
+      accounts,
     },
     zkSyncTestnet: {
       chainId: 280,
-      url: process.env.ZKSYNC_TESTNET_URL || "",
-      ethNetwork: process.env.ETH_GOERLI_TESTNET_URL || "",
+      url: vars.get("ZKSYNC_TESTNET_URL", "https://testnet.era.zksync.dev"),
+      ethNetwork: vars.get(
+        "ETH_GOERLI_TESTNET_URL",
+        "https://rpc.ankr.com/eth_goerli",
+      ),
       zksync: true,
       verifyURL:
         "https://zksync2-testnet-explorer.zksync.dev/contract_verification",
+      accounts,
     },
     zkSyncMain: {
       chainId: 324,
-      url: process.env.ZKSYNC_MAINNET_URL || "",
-      ethNetwork: process.env.ETH_MAINNET_URL || "",
+      url: vars.get("ZKSYNC_MAINNET_URL", "https://mainnet.era.zksync.io"),
+      ethNetwork: ethMainnetUrl,
       zksync: true,
       verifyURL:
         "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
+      accounts,
     },
   },
   etherscan: {
     apiKey: {
       // For Ethereum testnets
-      goerli: process.env.ETHERSCAN_API_KEY || "",
-      sepolia: process.env.ETHERSCAN_API_KEY || "",
+      goerli: vars.get("ETHERSCAN_API_KEY", ""),
+      sepolia: vars.get("ETHERSCAN_API_KEY", ""),
     },
   },
 };

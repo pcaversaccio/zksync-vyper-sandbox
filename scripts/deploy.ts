@@ -1,11 +1,24 @@
-import { ethers } from "hardhat";
+import hre, { ethers } from "hardhat";
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 async function main() {
-  const contract = await ethers.deployContract("Greeter", ["Hello, Hardhat!"]);
+  const constructorArgs = ["Hello, Hardhat!"];
+  const contract = await ethers.deployContract("Greeter", constructorArgs);
 
-  await contract.deployed();
+  await contract.waitForDeployment();
+  const contractAddress = await contract.getAddress();
 
-  console.log("Greeter deployed to:", contract.address);
+  console.log("Greeter deployed to:", contractAddress);
+
+  await delay(30000); // Wait for 30 seconds before verifying the contract
+
+  await hre.run("verify:verify", {
+    address: contractAddress,
+    constructorArguments: constructorArgs,
+  });
 }
 
 main().catch((error) => {
