@@ -12,7 +12,6 @@
   },
   "include": [
     "./scripts/**/*.ts",
-    "./test/**/*.ts",
     "./deploy/**/*.ts",
     "./typechain-types/**/*.ts"
   ],
