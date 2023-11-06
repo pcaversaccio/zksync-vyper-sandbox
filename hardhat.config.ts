@@ -8,8 +8,7 @@ import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-vyper";
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-verify";
-// Waiting until the new version with `zksync2-js` is released
-// import "@matterlabs/hardhat-zksync-verify-vyper";
+import "@matterlabs/hardhat-zksync-verify-vyper";
 
 const ethMainnetUrl = vars.get("ETH_MAINNET_URL", "https://rpc.ankr.com/eth");
 const accounts = [
