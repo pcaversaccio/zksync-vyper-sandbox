@@ -9,6 +9,7 @@ import "@matterlabs/hardhat-zksync-vyper";
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-verify";
 import "@matterlabs/hardhat-zksync-verify-vyper";
+import "@matterlabs/hardhat-zksync-zksync2js";
 
 const ethMainnetUrl = vars.get("ETH_MAINNET_URL", "https://rpc.ankr.com/eth");
 const accounts = [
@@ -39,7 +40,7 @@ const config: HardhatUserConfig = {
     version: "0.3.10",
   },
   zksolc: {
-    version: "1.3.16",
+    version: "1.3.17",
     compilerSource: "binary",
     settings: {
       isSystem: false,
@@ -102,6 +103,10 @@ const config: HardhatUserConfig = {
         "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
       accounts,
     },
+  },
+  sourcify: {
+    // Disable Sourcify verification by default
+    enabled: false,
   },
   etherscan: {
     apiKey: {

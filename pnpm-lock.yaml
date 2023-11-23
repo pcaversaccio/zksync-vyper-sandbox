@@ -9,23 +9,26 @@ devDependencies:
     specifier: ^1.0.0
     version: 1.0.0(ethers@6.8.1)(hardhat@2.19.1)(zksync2-js@0.2.2)
   "@matterlabs/hardhat-zksync-solc":
-    specifier: ^1.0.0
-    version: 1.0.0(hardhat@2.19.1)
+    specifier: ^1.0.2
+    version: 1.0.2(hardhat@2.19.1)
   "@matterlabs/hardhat-zksync-verify":
-    specifier: ^1.0.0
-    version: 1.0.0(@nomicfoundation/hardhat-verify@1.1.1)(hardhat@2.19.1)
+    specifier: ^1.1.0
+    version: 1.1.0(@nomicfoundation/hardhat-verify@2.0.1)(hardhat@2.19.1)
   "@matterlabs/hardhat-zksync-verify-vyper":
-    specifier: 0.0.1-alpha.3
-    version: 0.0.1-alpha.3(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
+    specifier: 0.0.1-alpha.2
+    version: 0.0.1-alpha.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
   "@matterlabs/hardhat-zksync-vyper":
-    specifier: ^1.0.0
-    version: 1.0.0(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
+    specifier: ^1.0.2
+    version: 1.0.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
+  "@matterlabs/hardhat-zksync-zksync2js":
+    specifier: 0.0.1-beta.2
+    version: 0.0.1-beta.2(ethers@6.8.1)(zksync2-js@0.2.2)
   "@nomicfoundation/hardhat-ethers":
     specifier: ^3.0.5
     version: 3.0.5(ethers@6.8.1)(hardhat@2.19.1)
   "@nomicfoundation/hardhat-verify":
-    specifier: ^1.1.1
-    version: 1.1.1(hardhat@2.19.1)
+    specifier: ^2.0.1
+    version: 2.0.1(hardhat@2.19.1)
   "@nomiclabs/hardhat-vyper":
     specifier: ^3.0.5
     version: 3.0.5(hardhat@2.19.1)
@@ -64,7 +67,7 @@ devDependencies:
     version: 4.0.0(typescript@5.3.2)
   ts-node:
     specifier: ^10.9.1
-    version: 10.9.1(@types/node@20.9.2)(typescript@5.3.2)
+    version: 10.9.1(@types/node@20.9.4)(typescript@5.3.2)
   typechain:
     specifier: ^8.3.2
     version: 8.3.2(typescript@5.3.2)
@@ -722,25 +725,6 @@ packages:
       - supports-color
     dev: true
 
-  /@matterlabs/hardhat-zksync-solc@0.4.1(hardhat@2.19.1):
-    resolution:
-      {
-        integrity: sha512-fdlGf/2yZR5ihVNc2ubea1R/nNFXRONL29Fgz5FwB3azB13rPb76fkQgcFIg9zSufHsEy6zUUT029NkxLNA9Sw==,
-      }
-    peerDependencies:
-      hardhat: ^2.14.0
-    dependencies:
-      "@nomiclabs/hardhat-docker": 2.0.2
-      chalk: 4.1.2
-      dockerode: 3.3.5
-      fs-extra: 11.1.1
-      hardhat: 2.19.1(ts-node@10.9.1)(typescript@5.3.2)
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
   /@matterlabs/hardhat-zksync-solc@1.0.0(hardhat@2.19.1):
     resolution:
       {
@@ -761,15 +745,35 @@ packages:
       - supports-color
     dev: true
 
-  /@matterlabs/hardhat-zksync-verify-vyper@0.0.1-alpha.3(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1):
+  /@matterlabs/hardhat-zksync-solc@1.0.2(hardhat@2.19.1):
     resolution:
       {
-        integrity: sha512-8iiX9pSQKOWZRvOqyYrKYQMixvMiJYujW0bfXEnCHR9j+vbExkKd1bVDjwYyaEEvTvhmgrPaenft1j18RvwYgA==,
+        integrity: sha512-y21JuRfcJcdTdC+1IovfanysaOxyJBROc8QT7tqLWgtu2OLOCXgpd67ZKVVJkO0L9Vu2B0xDUv83KOgZvn6ZWg==,
       }
     peerDependencies:
       hardhat: ^2.18.1
     dependencies:
-      "@matterlabs/hardhat-zksync-vyper": 1.0.0(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
+      "@nomiclabs/hardhat-docker": 2.0.2
+      chalk: 4.1.2
+      dockerode: 4.0.0
+      fs-extra: 11.1.1
+      hardhat: 2.19.1(ts-node@10.9.1)(typescript@5.3.2)
+      proper-lockfile: 4.1.2
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@matterlabs/hardhat-zksync-verify-vyper@0.0.1-alpha.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1):
+    resolution:
+      {
+        integrity: sha512-8pdL9RHrchSI3I/uHkZm26snW696t5hzhkIeCZHvpH80Yyx0aEHDYk3JbREGDod3PfOTPlIowbanUg/sX4IOtw==,
+      }
+    peerDependencies:
+      hardhat: ^2.14.0
+    dependencies:
+      "@matterlabs/hardhat-zksync-vyper": 0.2.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1)
       axios: 1.6.2
       chalk: 4.1.2
       hardhat: 2.19.1(ts-node@10.9.1)(typescript@5.3.2)
@@ -780,19 +784,18 @@ packages:
       - supports-color
     dev: true
 
-  /@matterlabs/hardhat-zksync-verify@1.0.0(@nomicfoundation/hardhat-verify@1.1.1)(hardhat@2.19.1):
+  /@matterlabs/hardhat-zksync-verify@1.1.0(@nomicfoundation/hardhat-verify@2.0.1)(hardhat@2.19.1):
     resolution:
       {
-        integrity: sha512-wHCuJ6Z5SJsq4rZUH35nxh9ma6QKvyUTssAgR1FSPfJk6dEa1TL3LZwLR5V7MihwYxI0gu30PrH8CWZZuFSKKA==,
+        integrity: sha512-2nw6qoip31i/MpOSF71WPR5C/xqhuERz4sm08rmvfk8c47wO17h5w0tsdYJ9wwUv6tMzXGbVquIJwQIrkyttPg==,
       }
     peerDependencies:
-      "@nomicfoundation/hardhat-verify": ^1.1.1
+      "@nomicfoundation/hardhat-verify": ^2.0.0
     dependencies:
-      "@matterlabs/hardhat-zksync-solc": 0.4.1(hardhat@2.19.1)
-      "@nomicfoundation/hardhat-verify": 1.1.1(hardhat@2.19.1)
+      "@matterlabs/hardhat-zksync-solc": 1.0.2(hardhat@2.19.1)
+      "@nomicfoundation/hardhat-verify": 2.0.1(hardhat@2.19.1)
       axios: 1.6.2
       chalk: 4.1.2
-      dockerode: 3.3.5
     transitivePeerDependencies:
       - debug
       - encoding
@@ -800,14 +803,14 @@ packages:
       - supports-color
     dev: true
 
-  /@matterlabs/hardhat-zksync-vyper@1.0.0(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1):
+  /@matterlabs/hardhat-zksync-vyper@0.2.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1):
     resolution:
       {
-        integrity: sha512-RKrzuy/SqnB9AS62lTfm70Z0Wg571Di3B/IOSf3fqiEhwt6Jjc8og3acEUdIdn0TNQUNBoLqZdQdVG9T00yDJA==,
+        integrity: sha512-FU22i4XrSR6WqISrsjVXDIY9BEEGUtb5ictOH4SR+EwzGgfSPm4C7cCTKXdtJ5ZHCOR99cwx/okVfKCwv7XVFw==,
       }
     peerDependencies:
-      "@nomiclabs/hardhat-vyper": ^3.0.5
-      hardhat: ^2.18.1
+      "@nomiclabs/hardhat-vyper": ^3.0.3
+      hardhat: ^2.14.0
     dependencies:
       "@nomiclabs/hardhat-docker": 2.0.2
       "@nomiclabs/hardhat-vyper": 3.0.5(hardhat@2.19.1)
@@ -819,6 +822,41 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@matterlabs/hardhat-zksync-vyper@1.0.2(@nomiclabs/hardhat-vyper@3.0.5)(hardhat@2.19.1):
+    resolution:
+      {
+        integrity: sha512-4RPer3u3mutKh0hbwO0UGzqe+qPHkiJDPdxxQBwZ0gmm1JH5DJgBRVc7T7ILlyyyB2/a40iJ0EaiBPot6+QxgA==,
+      }
+    peerDependencies:
+      "@nomiclabs/hardhat-vyper": ^3.0.5
+      hardhat: ^2.18.1
+    dependencies:
+      "@nomiclabs/hardhat-docker": 2.0.2
+      "@nomiclabs/hardhat-vyper": 3.0.5(hardhat@2.19.1)
+      chalk: 4.1.2
+      dockerode: 4.0.0
+      fs-extra: 11.1.1
+      hardhat: 2.19.1(ts-node@10.9.1)(typescript@5.3.2)
+      semver: 7.5.4
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
+  /@matterlabs/hardhat-zksync-zksync2js@0.0.1-beta.2(ethers@6.8.1)(zksync2-js@0.2.2):
+    resolution:
+      {
+        integrity: sha512-Q0VNkfwYpWd+OxoTOEE4rintVJwU16TRZinF7aPWR4W47tLbiPW3k/snPDqZiVwRp/zqKp9PXMpy4o9LjlP+4Q==,
+      }
+    peerDependencies:
+      ethers: ^6.7.1
+      zksync2-js: ^0.2.2
+    dependencies:
+      chalk: 5.3.0
+      ethers: 6.8.1
+      zksync2-js: 0.2.2(ethers@6.8.1)
     dev: true
 
   /@metamask/eth-sig-util@4.0.1:
@@ -1104,10 +1142,10 @@ packages:
       - supports-color
     dev: true
 
-  /@nomicfoundation/hardhat-verify@1.1.1(hardhat@2.19.1):
+  /@nomicfoundation/hardhat-verify@2.0.1(hardhat@2.19.1):
     resolution:
       {
-        integrity: sha512-9QsTYD7pcZaQFEA3tBb/D/oCStYDiEVDN7Dxeo/4SCyHRSm86APypxxdOMEPlGmXsAvd+p1j/dTODcpxb8aztA==,
+        integrity: sha512-TuJrhW5p9x92wDRiRhNkGQ/wzRmOkfCLkoRg8+IRxyeLigOALbayQEmkNiGWR03vGlxZS4znXhKI7y97JwZ6Og==,
       }
     peerDependencies:
       hardhat: ^2.0.4
@@ -1554,7 +1592,7 @@ packages:
         integrity: sha512-pqr857jrp2kPuO9uRjZ3PwnJTjoQy+fcdxvBTvHm6dkmEL9q+hDD/2j/0ELOBPtPnS8LjCX0gI9nbl8lVkadpg==,
       }
     dependencies:
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
     dev: true
 
   /@types/bn.js@5.1.5:
@@ -1563,7 +1601,7 @@ packages:
         integrity: sha512-V46N0zwKRF5Q00AZ6hWtN0T8gGmDUaUzLWQvHFo5yThtVwK/VCenFY3wXVbOvNfajEpsTfQM4IN9k/d6gUVX3A==,
       }
     dependencies:
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
     dev: true
 
   /@types/http-cache-semantics@4.0.4:
@@ -1594,10 +1632,10 @@ packages:
       }
     dev: true
 
-  /@types/node@20.9.2:
+  /@types/node@20.9.4:
     resolution:
       {
-        integrity: sha512-WHZXKFCEyIUJzAwh3NyyTHYSR35SevJ6mZ1nWwJafKtiQbqRTIKSRcw3Ma3acqgsent3RRDqeVwpHntMk+9irg==,
+        integrity: sha512-wmyg8HUhcn6ACjsn8oKYjkN/zUzQeNtMy44weTJSM6p4MMzEOuKbA3OjJ267uPCOW7Xex9dyrNTful8XTQYoDA==,
       }
     dependencies:
       undici-types: 5.26.5
@@ -1609,7 +1647,7 @@ packages:
         integrity: sha512-uRwJqmiXmh9++aSu1VNEn3iIxWOhd8AHXNSdlaLfdAAdSTY9jYVeGWnzejM3dvrkbqE3/hyQkQQ29IFATEGlew==,
       }
     dependencies:
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
     dev: true
 
   /@types/prettier@2.7.3:
@@ -1625,7 +1663,7 @@ packages:
         integrity: sha512-oM5JSKQCcICF1wvGgmecmHldZ48OZamtMxcGGVICOJA8o8cahXC1zEVAif8iwoc5j8etxFaRFnf095+CDsuoFQ==,
       }
     dependencies:
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
       safe-buffer: 5.1.2
     dev: true
 
@@ -1635,13 +1673,13 @@ packages:
         integrity: sha512-hHxJU6PAEUn0TP4S/ZOzuTUvJWuZ6eIKeNKb5RBpODvSl6hp1Wrw4s7ATY50rklRCScUDpHzVA/DQdSjJ3UoYQ==,
       }
     dependencies:
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
     dev: true
 
-  /@types/semver@7.5.5:
+  /@types/semver@7.5.6:
     resolution:
       {
-        integrity: sha512-+d+WYC1BxJ6yVOgUgzK8gWvp5qF8ssV5r4nsDcZWKRWcDQLQ619tvWAxJQYGgBrO1MnLJC7a5GtiYsAoQ47dJg==,
+        integrity: sha512-dn1l8LaMea/IjDoHNd9J52uBbInB796CDffS6VdIxvqYCPSG0V0DzHp76GpaWnlhg88uYyPbXCDIowa86ybd5A==,
       }
     dev: true
 
@@ -1778,7 +1816,7 @@ packages:
     dependencies:
       "@eslint-community/eslint-utils": 4.4.0(eslint@8.54.0)
       "@types/json-schema": 7.0.15
-      "@types/semver": 7.5.5
+      "@types/semver": 7.5.6
       "@typescript-eslint/scope-manager": 6.12.0
       "@typescript-eslint/types": 6.12.0
       "@typescript-eslint/typescript-estree": 6.12.0(typescript@5.3.2)
@@ -2452,6 +2490,14 @@ packages:
       supports-color: 7.2.0
     dev: true
 
+  /chalk@5.3.0:
+    resolution:
+      {
+        integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==,
+      }
+    engines: { node: ^12.17.0 || ^14.13 || >=16.0.0 }
+    dev: true
+
   /chokidar@3.5.3:
     resolution:
       {
@@ -2901,6 +2947,21 @@ packages:
       - supports-color
     dev: true
 
+  /docker-modem@5.0.1:
+    resolution:
+      {
+        integrity: sha512-vqrE/nrweCyzmCpVpdFRC41qS+tfTF+IoUKlTZr52O82urbUqdfyJBGWMvT01pYUprWepLr8IkyVTEWJKRTQSg==,
+      }
+    engines: { node: ">= 8.0" }
+    dependencies:
+      debug: 4.3.4(supports-color@8.1.1)
+      readable-stream: 3.6.2
+      split-ca: 1.0.1
+      ssh2: 1.14.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /dockerode@2.5.8:
     resolution:
       {
@@ -2924,6 +2985,20 @@ packages:
     dependencies:
       "@balena/dockerignore": 1.0.2
       docker-modem: 3.0.8
+      tar-fs: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /dockerode@4.0.0:
+    resolution:
+      {
+        integrity: sha512-3LF7/3MPz5+9RsUo91rD0MCcx0yxjC9bnbtgtVjOLKyKxlZSJ7/Kk3OPAgARlwlWHqXwAGYhmkAHYx7IwD0tJQ==,
+      }
+    engines: { node: ">= 8.0" }
+    dependencies:
+      "@balena/dockerignore": 1.0.2
+      docker-modem: 5.0.1
       tar-fs: 2.0.1
     transitivePeerDependencies:
       - supports-color
@@ -3769,7 +3844,7 @@ packages:
       solc: 0.7.3(debug@4.3.4)
       source-map-support: 0.5.21
       stacktrace-parser: 0.1.10
-      ts-node: 10.9.1(@types/node@20.9.2)(typescript@5.3.2)
+      ts-node: 10.9.1(@types/node@20.9.4)(typescript@5.3.2)
       tsort: 0.0.1
       typescript: 5.3.2
       undici: 5.27.2
@@ -5870,7 +5945,7 @@ packages:
       code-block-writer: 12.0.0
     dev: true
 
-  /ts-node@10.9.1(@types/node@20.9.2)(typescript@5.3.2):
+  /ts-node@10.9.1(@types/node@20.9.4)(typescript@5.3.2):
     resolution:
       {
         integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==,
@@ -5892,7 +5967,7 @@ packages:
       "@tsconfig/node12": 1.0.11
       "@tsconfig/node14": 1.0.3
       "@tsconfig/node16": 1.0.4
-      "@types/node": 20.9.2
+      "@types/node": 20.9.4
       acorn: 8.11.2
       acorn-walk: 8.3.0
       arg: 4.1.3

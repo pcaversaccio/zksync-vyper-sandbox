@@ -2,6 +2,7 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Wallet } from "zksync2-js";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
+import { delay } from "../scripts/deploy";
 
 export default async function main(hre: HardhatRuntimeEnvironment) {
   // Get the zkSync-specific private key (if any preconfigured)
@@ -36,6 +37,15 @@ export default async function main(hre: HardhatRuntimeEnvironment) {
   const contract = await deployer.deploy(artifact);
 
   await contract.waitForDeployment();
+  const contractAddress = await contract.getAddress();
 
-  console.log("Foo deployed to:", await contract.getAddress());
+  console.log("Foo deployed to:", contractAddress);
+
+  if (!localFlag) {
+    await delay(30000); // Wait for 30 seconds before verifying the contract
+
+    await hre.run("verify:verify:vyper", {
+      address: contractAddress,
+    });
+  }
 }
