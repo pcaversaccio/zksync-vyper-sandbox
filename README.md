@@ -20,14 +20,14 @@ git submodule update --init --recursive
 
 ```console
 cd local-setup
-.\start.sh
+./start.sh
 ```
 
 ## Reset Local Node
 
 ```console
 cd local-setup
-.\clear.sh
+./clear.sh
 ```
 
 ## Retrieve Values

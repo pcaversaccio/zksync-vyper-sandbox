@@ -9,9 +9,8 @@ import "@matterlabs/hardhat-zksync-vyper";
 import "@matterlabs/hardhat-zksync-deploy";
 import "@matterlabs/hardhat-zksync-verify";
 import "@matterlabs/hardhat-zksync-verify-vyper";
-import "@matterlabs/hardhat-zksync-zksync2js";
+import "@matterlabs/hardhat-zksync-ethers";
 
-const ethMainnetUrl = vars.get("ETH_MAINNET_URL", "https://rpc.ankr.com/eth");
 const accounts = [
   vars.get(
     "PRIVATE_KEY",
@@ -66,7 +65,7 @@ const config: HardhatUserConfig = {
     zkSyncLocal: {
       chainId: 270,
       url: vars.get("ZKSYNC_LOCAL_TESTNET_URL", "http://localhost:3050"),
-      ethNetwork: vars.get("ETH_LOCAL_TESTNET_URL", "http://localhost:8545"),
+      ethNetwork: "localhost",
       zksync: true,
     },
     goerli: {
@@ -85,10 +84,7 @@ const config: HardhatUserConfig = {
     zkSyncTestnet: {
       chainId: 300,
       url: vars.get("ZKSYNC_TESTNET_URL", "https://sepolia.era.zksync.dev"),
-      ethNetwork: vars.get(
-        "ETH_SEPOLIA_TESTNET_URL",
-        "https://rpc.sepolia.org",
-      ),
+      ethNetwork: "sepolia",
       zksync: true,
       verifyURL:
         "https://explorer.sepolia.era.zksync.dev/contract_verification",
@@ -97,7 +93,7 @@ const config: HardhatUserConfig = {
     zkSyncMain: {
       chainId: 324,
       url: vars.get("ZKSYNC_MAINNET_URL", "https://mainnet.era.zksync.io"),
-      ethNetwork: ethMainnetUrl,
+      ethNetwork: "mainnet",
       zksync: true,
       verifyURL:
         "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
