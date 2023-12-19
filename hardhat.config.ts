@@ -103,6 +103,8 @@ const config: HardhatUserConfig = {
   sourcify: {
     // Disable Sourcify verification by default
     enabled: false,
+    apiUrl: "https://sourcify.dev/server",
+    browserUrl: "https://repo.sourcify.dev",
   },
   etherscan: {
     apiKey: {
