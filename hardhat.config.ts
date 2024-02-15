@@ -39,7 +39,7 @@ const config: HardhatUserConfig = {
     version: "0.3.10",
   },
   zksolc: {
-    version: "1.3.22",
+    version: "1.3.23",
     compilerSource: "binary",
     settings: {
       isSystem: false,
@@ -52,7 +52,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.3.16",
+    version: "1.3.17",
     settings: {
       libraries: {},
       optimizer: {

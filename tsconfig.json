@@ -11,9 +11,11 @@
     "resolveJsonModule": true
   },
   "include": [
+    "./scripts/**/*.js",
     "./scripts/**/*.ts",
+    "./deploy/**/*.js",
     "./deploy/**/*.ts",
     "./typechain-types/**/*.ts"
   ],
-  "files": ["./hardhat.config.ts"]
+  "files": ["./hardhat.config.ts", "eslint.config.js"]
 }
