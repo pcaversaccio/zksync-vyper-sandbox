@@ -64,7 +64,7 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       chainId: 31337,
-      hardfork: "shanghai",
+      hardfork: "cancun",
       zksync: true,
     },
     zkSyncLocal: {
