@@ -37,6 +37,10 @@ const config: HardhatUserConfig = {
   },
   vyper: {
     version: "0.3.10",
+    settings: {
+      evmVersion: "paris",
+      optimize: "gas",
+    },
   },
   zksolc: {
     version: "1.4.0",
