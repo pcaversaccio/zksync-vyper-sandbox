@@ -43,7 +43,7 @@ const config: HardhatUserConfig = {
     },
   },
   zksolc: {
-    version: "1.4.0",
+    version: "1.4.1",
     compilerSource: "binary",
     settings: {
       isSystem: false,
@@ -56,7 +56,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.4.0",
+    version: "1.4.1",
     settings: {
       libraries: {},
       optimizer: {
@@ -77,17 +77,17 @@ const config: HardhatUserConfig = {
       ethNetwork: "localhost",
       zksync: true,
     },
-    goerli: {
-      chainId: 5,
-      url: vars.get(
-        "ETH_GOERLI_TESTNET_URL",
-        "https://rpc.ankr.com/eth_goerli",
-      ),
-      accounts,
-    },
     sepolia: {
       chainId: 11155111,
       url: vars.get("ETH_SEPOLIA_TESTNET_URL", "https://rpc.sepolia.org"),
+      accounts,
+    },
+    holesky: {
+      chainId: 17000,
+      url: vars.get(
+        "ETH_HOLESKY_TESTNET_URL",
+        "https://holesky.rpc.thirdweb.com",
+      ),
       accounts,
     },
     zkSyncTestnet: {
@@ -117,9 +117,10 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      // For Ethereum testnets
-      goerli: vars.get("ETHERSCAN_API_KEY", ""),
+      // For Ethereum testnets & mainnet
+      mainnet: vars.get("ETHERSCAN_API_KEY", ""),
       sepolia: vars.get("ETHERSCAN_API_KEY", ""),
+      holesky: vars.get("ETHERSCAN_API_KEY", ""),
     },
   },
 };
