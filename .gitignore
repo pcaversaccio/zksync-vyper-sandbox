@@ -60,6 +60,7 @@ typechain-types
 # zkSync files
 cache-zk
 artifacts-zk
+deployments-zk
 
 # Python virtual environments
 env
