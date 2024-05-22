@@ -24,15 +24,17 @@ const config: HardhatUserConfig = {
     sources: "./contracts/vyper",
   },
   solidity: {
+    // Only use Solidity default versions `>=0.8.25` for EVM networks that support the new `cancun` opcodes:
+    // https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md
     // Only use Solidity default versions `>=0.8.20` for EVM networks that support the opcode `PUSH0`
     // Otherwise, use the versions `<=0.8.19`
-    version: "0.8.25",
+    version: "0.8.26",
     settings: {
       optimizer: {
         enabled: true,
         runs: 999_999,
       },
-      evmVersion: "paris", // prevent using the `PUSH0` opcode
+      evmVersion: "paris", // prevent using the `PUSH0` and `cancun` opcode
     },
   },
   vyper: {
