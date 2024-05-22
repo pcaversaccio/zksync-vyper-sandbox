@@ -34,7 +34,7 @@ const config: HardhatUserConfig = {
         enabled: true,
         runs: 999_999,
       },
-      evmVersion: "paris", // prevent using the `PUSH0` and `cancun` opcode
+      evmVersion: "paris", // prevent using the `PUSH0` and `cancun` opcodes
     },
   },
   vyper: {
