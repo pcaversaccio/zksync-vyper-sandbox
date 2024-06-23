@@ -1,4 +1,4 @@
-# zkSync Era Vyper Compiler Sandbox Environment
+# ZKsync Era Vyper Compiler Sandbox Environment
 
 We cannot trust in what we do not understand. The source code of the compiler can be found [here](https://github.com/matter-labs/era-compiler-vyper).
 
@@ -52,4 +52,5 @@ cast call --rpc-url https://testnet.era.zksync.dev <contract-address> "var()"
 - https://github.com/matter-labs/era-system-contracts
 - https://github.com/matter-labs/zkvyper-bin
 - https://github.com/matter-labs/zksync-hardhat-vyper-template
+- https://github.com/matter-labs/zksync-contract-templates
 - https://github.com/matter-labs/local-setup

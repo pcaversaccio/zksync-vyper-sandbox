@@ -1,7 +1,7 @@
 {
   "name": "zksync-vyper-sandbox",
   "version": "1.0.0",
-  "description": "A sandbox environment for zkSync Era Vyper compiler testing.",
+  "description": "A sandbox environment for ZKsync Era Vyper compiler testing.",
   "keywords": [
     "compiler",
     "testing",
@@ -33,10 +33,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.5.0",
-    "@matterlabs/hardhat-zksync-deploy": "^1.4.0",
-    "@matterlabs/hardhat-zksync-ethers": "1.0.0",
-    "@matterlabs/hardhat-zksync-solc": "^1.1.4",
-    "@matterlabs/hardhat-zksync-verify": "^1.4.3",
+    "@matterlabs/hardhat-zksync-deploy": "^1.5.0",
+    "@matterlabs/hardhat-zksync-ethers": "1.1.0",
+    "@matterlabs/hardhat-zksync-solc": "^1.2.0",
+    "@matterlabs/hardhat-zksync-verify": "^1.5.0",
     "@matterlabs/hardhat-zksync-verify-vyper": "0.0.1-alpha.6",
     "@matterlabs/hardhat-zksync-vyper": "^1.0.8",
     "@nomicfoundation/hardhat-ethers": "^3.0.6",
@@ -53,8 +53,8 @@
     "solhint": "^5.0.1",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
-    "typescript": "^5.4.5",
+    "typescript": "^5.5.2",
     "typescript-eslint": "^7.13.1",
-    "zksync-ethers": "^6.8.0"
+    "zksync-ethers": "^6.9.0"
   }
 }

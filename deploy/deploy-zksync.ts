@@ -12,7 +12,7 @@ function delay(ms: number) {
 }
 
 export default async function main(hre: HardhatRuntimeEnvironment) {
-  // Get the zkSync-specific private key (if any preconfigured)
+  // Get the ZKsync-specific private key (if any preconfigured)
   const accounts = hre.network.config.accounts;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let ZKSYNC_PRIVATE_KEY: any;

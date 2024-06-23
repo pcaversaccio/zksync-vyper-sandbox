@@ -57,7 +57,7 @@ artifacts
 # TypeScript bindings output directory
 typechain-types
 
-# zkSync files
+# ZKsync files
 cache-zk
 artifacts-zk
 deployments-zk
