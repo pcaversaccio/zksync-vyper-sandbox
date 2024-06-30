@@ -1,4 +1,4 @@
-# @version ^0.3.10
+# pragma version ~=0.4.0
 """
 @custom:contract-name Foo
 @license Do What The F*ck You Want To Public License
@@ -9,7 +9,7 @@
 IMMUTABLE_1: public(immutable(String[4]))
 
 
-@external
+@deploy
 @payable
 def __init__():
     IMMUTABLE_1 = "Test"
