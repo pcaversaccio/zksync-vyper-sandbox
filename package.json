@@ -32,7 +32,7 @@
     "lint:fix": "pnpm prettier:fix && pnpm solhint:fix && npx eslint . --fix"
   },
   "devDependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.9.0",
     "@matterlabs/hardhat-zksync-deploy": "^1.5.0",
     "@matterlabs/hardhat-zksync-ethers": "1.1.0",
     "@matterlabs/hardhat-zksync-solc": "^1.2.1",
@@ -44,7 +44,7 @@
     "@nomiclabs/hardhat-vyper": "^3.0.7",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "ethers": "^6.13.2",
     "hardhat": "^2.22.8",
@@ -55,6 +55,6 @@
     "typechain": "^8.3.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1",
-    "zksync-ethers": "^6.11.1"
+    "zksync-ethers": "^6.11.2"
   }
 }
