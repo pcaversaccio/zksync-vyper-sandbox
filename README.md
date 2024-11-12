@@ -41,7 +41,7 @@ cast call --rpc-url http://localhost:3050 <contract-address> "var()"
 #### Testnet
 
 ```console
-cast call --rpc-url https://testnet.era.zksync.dev <contract-address> "var()"
+cast call --rpc-url https://sepolia.era.zksync.dev <contract-address> "var()"
 ```
 
 ## Further References
