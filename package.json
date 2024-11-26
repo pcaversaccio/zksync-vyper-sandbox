@@ -48,13 +48,13 @@
     "eslint-config-prettier": "^9.1.0",
     "ethers": "^6.13.4",
     "hardhat": "^2.22.16",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.0",
     "prettier-plugin-solidity": "^1.4.1",
     "solhint": "^5.0.3",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.15.0",
+    "typescript-eslint": "^8.16.0",
     "zksync-ethers": "^6.15.1"
   }
 }
