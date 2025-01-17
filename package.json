@@ -50,7 +50,7 @@
     "hardhat": "^2.22.18",
     "prettier": "^3.4.2",
     "prettier-plugin-solidity": "^1.4.2",
-    "solhint": "^5.0.4",
+    "solhint": "^5.0.5",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
     "typescript": "^5.7.3",
