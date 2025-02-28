@@ -46,7 +46,7 @@
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-prettier": "^10.0.2",
     "ethers": "^6.13.5",
     "hardhat": "^2.22.19",
     "prettier": "^3.5.2",
