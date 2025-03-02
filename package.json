@@ -18,7 +18,7 @@
   },
   "author": "Pascal Marco Caversaccio <pascal.caversaccio@hotmail.ch>",
   "license": "MIT",
-  "packageManager": "pnpm@10.5.0",
+  "packageManager": "pnpm@10.5.2",
   "scripts": {
     "compile": "npx hardhat compile",
     "vars:path": "npx hardhat vars path",
@@ -54,7 +54,7 @@
     "solhint": "^5.0.5",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.2",
     "typescript-eslint": "^8.25.0",
     "zksync-ethers": "^6.16.1"
   },
