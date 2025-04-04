@@ -38,7 +38,7 @@ const config: HardhatUserConfig = {
     },
   },
   vyper: {
-    version: "0.4.0",
+    version: "0.4.1",
     settings: {
       evmVersion: "paris",
       optimize: "gas",
