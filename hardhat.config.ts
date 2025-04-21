@@ -45,7 +45,7 @@ const config: HardhatUserConfig = {
     },
   },
   zksolc: {
-    version: "1.5.12",
+    version: "1.5.13",
     compilerSource: "binary",
     settings: {
       enableEraVMExtensions: false,
@@ -58,7 +58,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.5.9",
+    version: "1.5.10",
     settings: {
       libraries: {},
       optimizer: {
