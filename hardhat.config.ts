@@ -38,14 +38,14 @@ const config: HardhatUserConfig = {
     },
   },
   vyper: {
-    version: "0.4.1",
+    version: "0.4.2",
     settings: {
       evmVersion: "paris",
       optimize: "gas",
     },
   },
   zksolc: {
-    version: "1.5.13",
+    version: "1.5.15",
     compilerSource: "binary",
     settings: {
       enableEraVMExtensions: false,
