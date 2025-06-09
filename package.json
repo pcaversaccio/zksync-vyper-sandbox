@@ -18,7 +18,7 @@
   },
   "author": "Pascal Marco Caversaccio <pascal.caversaccio@hotmail.ch>",
   "license": "MIT",
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.12.1",
   "scripts": {
     "compile": "npx hardhat compile",
     "vars:path": "npx hardhat vars path",
@@ -40,7 +40,7 @@
     "@matterlabs/hardhat-zksync-verify": "^1.8.1",
     "@matterlabs/hardhat-zksync-verify-vyper": "0.1.0-alpha.6",
     "@matterlabs/hardhat-zksync-vyper": "^1.3.0",
-    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-ethers": "^3.0.9",
     "@nomicfoundation/hardhat-verify": "^2.0.14",
     "@nomiclabs/hardhat-vyper": "^3.0.8",
     "@typechain/ethers-v6": "^0.5.1",
