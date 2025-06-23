@@ -18,7 +18,7 @@
   },
   "author": "Pascal Marco Caversaccio <pascal.caversaccio@hotmail.ch>",
   "license": "MIT",
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "scripts": {
     "compile": "npx hardhat compile",
     "vars:path": "npx hardhat vars path",
@@ -49,7 +49,7 @@
     "eslint-config-prettier": "^10.1.5",
     "ethers": "^6.14.4",
     "hardhat": "^2.24.3",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "prettier-plugin-solidity": "^2.0.0",
     "solhint": "^5.1.0",
     "ts-node": "^10.9.2",
