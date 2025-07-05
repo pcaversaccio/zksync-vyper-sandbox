@@ -1,4 +1,4 @@
-# pragma version ~=0.4.2
+# pragma version ~=0.4.3
 """
 @custom:contract-name Foo
 @license Do What The F*ck You Want To Public License
