@@ -58,7 +58,7 @@ const config: HardhatUserConfig = {
     },
   },
   zkvyper: {
-    version: "1.5.10",
+    version: "1.5.11",
     settings: {
       libraries: {},
       optimizer: {
