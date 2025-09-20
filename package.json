@@ -18,7 +18,7 @@
   },
   "author": "Pascal Marco Caversaccio <pascal.caversaccio@hotmail.ch>",
   "license": "MIT",
-  "packageManager": "pnpm@10.16.1",
+  "packageManager": "pnpm@10.17.0",
   "scripts": {
     "compile": "npx hardhat compile",
     "vars:path": "npx hardhat vars path",
@@ -33,7 +33,7 @@
     "lint:fix": "pnpm prettier:fix && pnpm solhint:fix && npx eslint . --fix"
   },
   "devDependencies": {
-    "@eslint/js": "^9.35.0",
+    "@eslint/js": "^9.36.0",
     "@matterlabs/hardhat-zksync-deploy": "^1.8.0",
     "@matterlabs/hardhat-zksync-ethers": "^1.4.0",
     "@matterlabs/hardhat-zksync-solc": "^1.5.1",
@@ -45,7 +45,7 @@
     "@nomiclabs/hardhat-vyper": "^3.1.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
-    "eslint": "^9.35.0",
+    "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "ethers": "^6.15.0",
     "hardhat": "^2.26.3",
@@ -56,7 +56,7 @@
     "typechain": "^8.3.2",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0",
-    "zksync-ethers": "^6.20.1"
+    "zksync-ethers": "^6.21.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
