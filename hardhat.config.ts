@@ -24,23 +24,28 @@ const config: HardhatUserConfig = {
     sources: "./contracts/vyper",
   },
   solidity: {
+    // Only use Solidity default versions `>=0.8.31` for EVM networks that support the new `osaka` opcode `CLZ` and precompiled contract `P256VERIFY`:
+    // https://github.com/ethereum/execution-specs/blob/forks/osaka/src/ethereum/forks/osaka/__init__.py
+    // Only use Solidity default versions `>=0.8.30` for EVM networks that support the new `prague` precompiled contracts:
+    // https://github.com/ethereum/execution-specs/blob/forks/osaka/src/ethereum/forks/prague/__init__.py
     // Only use Solidity default versions `>=0.8.25` for EVM networks that support the new `cancun` opcodes:
-    // https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md
-    // Only use Solidity default versions `>=0.8.20` for EVM networks that support the opcode `PUSH0`
+    // https://github.com/ethereum/execution-specs/blob/forks/osaka/src/ethereum/forks/cancun/__init__.py
+    // Only use Solidity default versions `>=0.8.20` for EVM networks that support the new `shanghai` opcode `PUSH0`:
+    // https://github.com/ethereum/execution-specs/blob/forks/osaka/src/ethereum/forks/shanghai/__init__.py
     // Otherwise, use the versions `<=0.8.19`
-    version: "0.8.30",
+    version: "0.8.31",
     settings: {
       optimizer: {
         enabled: true,
         runs: 999_999,
       },
-      evmVersion: "paris", // prevent using the `PUSH0` and `cancun` opcodes
+      evmVersion: "osaka",
     },
   },
   vyper: {
-    version: "0.4.2",
+    version: "0.4.3",
     settings: {
-      evmVersion: "paris",
+      evmVersion: "prague",
       optimize: "gas",
     },
   },
@@ -70,7 +75,7 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       chainId: 31337,
-      hardfork: "cancun",
+      hardfork: "osaka",
       zksync: true,
     },
     zkSyncLocal: {
@@ -84,11 +89,11 @@ const config: HardhatUserConfig = {
       url: vars.get("ETH_SEPOLIA_TESTNET_URL", "https://rpc.sepolia.org"),
       accounts,
     },
-    holesky: {
-      chainId: 17000,
+    hoodi: {
+      chainId: 560048,
       url: vars.get(
-        "ETH_HOLESKY_TESTNET_URL",
-        "https://holesky.rpc.thirdweb.com",
+        "ETH_HOODI_TESTNET_URL",
+        "https://rpc.hoodi.ethpandaops.io",
       ),
       accounts,
     },
@@ -126,12 +131,20 @@ const config: HardhatUserConfig = {
       // For Ethereum testnets & mainnet
       mainnet: vars.get("ETHERSCAN_API_KEY", ""),
       sepolia: vars.get("ETHERSCAN_API_KEY", ""),
-      holesky: vars.get("ETHERSCAN_API_KEY", ""),
+      hoodi: vars.get("ETHERSCAN_API_KEY", ""),
       // For ZKsync testnet & mainnet
       zkSync: vars.get("ZKSYNC_API_KEY", ""),
       zkSyncTestnet: vars.get("ZKSYNC_API_KEY", ""),
     },
     customChains: [
+      {
+        network: "hoodi",
+        chainId: 560048,
+        urls: {
+          apiURL: "https://api-hoodi.etherscan.io/api",
+          browserURL: "https://hoodi.etherscan.io",
+        },
+      },
       {
         network: "zkSync",
         chainId: 324,
