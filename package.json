@@ -45,7 +45,7 @@
     "@nomiclabs/hardhat-vyper": "^3.1.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.1",
     "eslint-config-prettier": "^10.1.8",
     "ethers": "^6.16.0",
     "globals": "^17.3.0",
