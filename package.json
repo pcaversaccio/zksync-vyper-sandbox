@@ -18,7 +18,7 @@
   },
   "author": "pcaversaccio",
   "license": "MIT",
-  "packageManager": "pnpm@11.0.9",
+  "packageManager": "pnpm@11.1.1",
   "scripts": {
     "compile": "hardhat compile",
     "vars:path": "hardhat vars path",
