@@ -18,7 +18,7 @@
   },
   "author": "pcaversaccio",
   "license": "MIT",
-  "packageManager": "pnpm@11.6.0",
+  "packageManager": "pnpm@11.7.0",
   "scripts": {
     "compile": "hardhat compile",
     "vars:path": "hardhat vars path",
@@ -50,13 +50,13 @@
     "ethers": "^6.16.0",
     "globals": "^17.6.0",
     "hardhat": "^2.28.6",
-    "prettier": "^3.8.3",
+    "prettier": "^3.8.4",
     "prettier-plugin-solidity": "^2.3.1",
     "solhint": "^6.2.1",
     "ts-node": "^10.9.2",
     "typechain": "^8.3.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.1",
+    "typescript-eslint": "^8.61.0",
     "zksync-ethers": "^6.21.2"
   }
 }
